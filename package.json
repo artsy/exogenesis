@@ -1,0 +1,22 @@
+{
+  "name": "exogenesis",
+  "version": "1.0.0",
+  "description": "An experiment in universal react",
+  "main": "index.js",
+  "author": "Justin Bennett <justin.bennett@artsymail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prestart": "yarn",
+    "start": "run-p start:shared start:native start:web",
+    "start:shared": "yarn workspace shared start",
+    "start:native": "yarn workspace native start",
+    "start:web": "yarn workspace web start"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3"
+  }
+}

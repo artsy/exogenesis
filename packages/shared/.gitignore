@@ -1,0 +1,6 @@
+*
+!.gitignore
+!.babelrc
+!src
+!src/**/**
+!package.json
