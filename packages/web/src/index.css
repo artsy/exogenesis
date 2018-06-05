@@ -52,3 +52,8 @@ body {
   font-family: AGaramondPro-Semibold;
   src: url(~shared/assets/fonts/AGaramondPro-Semibold.otf);
 }
+
+@font-face {
+  font-family: AvantGardeGothicITC;
+  src: url(~shared/assets/fonts/AVG65lig.otf);
+}

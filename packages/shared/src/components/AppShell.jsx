@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components/primitives";
+import Tabs from "./Tabs";
+import ArtworkBrick from "./ArtworkBrick";
 import { ThemeProvider } from "./Theme";
 import { isWeb } from "../context";
 
@@ -14,7 +16,10 @@ export default class AppShell extends React.Component {
   render() {
     return (
       <ThemeProvider>
-        <Container>{this.props.children}</Container>
+        <Container>
+          <Tabs labels={["test1", "test2"]} />
+          <ArtworkBrick />
+        </Container>
       </ThemeProvider>
     );
   }

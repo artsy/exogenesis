@@ -16,14 +16,7 @@ const fontFamily = {
     mediumItalic: "Unica77LL-MediumItalic"
   },
   avantgarde: {
-    regular: [
-      "AvantGardeGothicITC",
-      "ITC Avant Garde Gothic W04",
-      "AvantGardeGothicITCW01D 731075",
-      "AvantGardeGothicITCW01Dm",
-      "Helvetica",
-      "sans-serif"
-    ]
+    regular: "AvantGardeGothicITC"
   },
   garamond: {
     regular: "AGaramondPro-Regular",
@@ -53,7 +46,7 @@ export const Serif = styled.Text`
   ${maxWidth}
 `;
 
-export const Display = css`
+export const Display = styled.Text`
   font-family: ${fontFamily.avantgarde.regular};
   ${color}
   ${fontSize}

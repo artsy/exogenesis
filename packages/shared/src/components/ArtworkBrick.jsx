@@ -17,20 +17,20 @@ export default class ArtworkBrick extends React.Component {
           style={{ width: 175, height: 262, marginBottom: 10 }}
           source={{ uri: "https://picsum.photos/200/300/?random" }}
         />
-        <SansText level="1">$2000,00</SansText>
-        <SerifText level="2" type="semibold" color="black60">
+        <SansText size="1">$2000,00</SansText>
+        <SerifText size="2" type="semibold" color="black60">
           Artist Unknown
         </SerifText>
         <Row>
-          <SerifText level="2" type="italic" color="black60">
+          <SerifText size="2" type="italic" color="black60">
             A Testable Image,
           </SerifText>
-          <SerifText level="2" color="black60">
+          <SerifText size="2" color="black60">
             {" "}
             2018
           </SerifText>
         </Row>
-        <SerifText level="2" color="black60">
+        <SerifText size="2" color="black60">
           Artsy
         </SerifText>
       </View>

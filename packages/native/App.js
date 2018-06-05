@@ -1,7 +1,6 @@
 import React from "react";
 import { Font } from "expo";
-import AppShell from "shared/components/AppShell";
-import ArtworkBrick from "shared/components/ArtworkBrick";
+import AppShell from "shared/lib/components/AppShell";
 
 export default class App extends React.Component {
   state = {
@@ -17,15 +16,12 @@ export default class App extends React.Component {
       "AGaramondPro-BoldItalic": require("shared/assets/fonts/AGaramondPro-BoldItalic.otf"),
       "AGaramondPro-Italic": require("shared/assets/fonts/AGaramondPro-Italic.otf"),
       "AGaramondPro-Regular": require("shared/assets/fonts/AGaramondPro-Regular.otf"),
-      "AGaramondPro-Semibold": require("shared/assets/fonts/AGaramondPro-Semibold.otf")
+      "AGaramondPro-Semibold": require("shared/assets/fonts/AGaramondPro-Semibold.otf"),
+      AvantGardeGothicITC: require("shared/assets/fonts/AVG65lig.otf")
     });
     this.setState({ fontLoaded: true });
   }
   render() {
-    return this.state.fontLoaded ? (
-      <AppShell>
-        <ArtworkBrick />
-      </AppShell>
-    ) : null;
+    return this.state.fontLoaded ? <AppShell /> : null;
   }
 }

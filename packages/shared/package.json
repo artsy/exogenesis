@@ -6,7 +6,7 @@
   "source": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "babel src/ -d .",
+    "build": "babel src/ -d lib",
     "start": "watch 'yarn build' src/"
   },
   "dependencies": {
