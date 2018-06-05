@@ -2,3 +2,4 @@ components
 node_modules
 yarn-error.log
 context.js
+!src
