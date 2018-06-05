@@ -1,5 +1,54 @@
+html,
+body,
+#root {
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: Unica77LL-Regular;
+  src: url(~shared/assets/fonts/Unica77LL-Regular.otf);
+}
+
+@font-face {
+  font-family: Unica77LL-Italic;
+  src: url(~shared/assets/fonts/Unica77LL-Italic.otf);
+}
+
+@font-face {
+  font-family: Unica77LL-Medium;
+  src: url(~shared/assets/fonts/Unica77LL-Medium.otf);
+}
+
+@font-face {
+  font-family: Unica77LL-MediumItalic;
+  src: url(~shared/assets/fonts/Unica77LL-MediumItalic.otf);
+}
+
+@font-face {
+  font-family: AGaramondPro-Bold;
+  src: url(~shared/assets/fonts/AGaramondPro-Bold.otf);
+}
+
+@font-face {
+  font-family: AGaramondPro-BoldItalic;
+  src: url(~shared/assets/fonts/AGaramondPro-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: AGaramondPro-Italic;
+  src: url(~shared/assets/fonts/AGaramondPro-Italic.otf);
+}
+
+@font-face {
+  font-family: AGaramondPro-Regular;
+  src: url(~shared/assets/fonts/AGaramondPro-Regular.otf);
+}
+
+@font-face {
+  font-family: AGaramondPro-Semibold;
+  src: url(~shared/assets/fonts/AGaramondPro-Semibold.otf);
 }

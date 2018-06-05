@@ -1,7 +1,7 @@
 import React from "react";
 import { Font } from "expo";
-import { ThemeProvider } from "shared/components/Theme";
-import ArtistBlock from "shared/components/ArtistBlock";
+import AppShell from "shared/components/AppShell";
+import ArtworkBrick from "shared/components/ArtworkBrick";
 
 export default class App extends React.Component {
   state = {
@@ -9,18 +9,23 @@ export default class App extends React.Component {
   };
   async componentDidMount() {
     await Font.loadAsync({
-      "Unica77LL-Regular": require("./assets/fonts/Unica77LL-Regular.otf"),
-      "Unica77LL-Italic": require("./assets/fonts/Unica77LL-Italic.otf"),
-      "Unica77LL-Medium": require("./assets/fonts/Unica77LL-Medium.otf"),
-      "Unica77LL-MediumItalic": require("./assets/fonts/Unica77LL-MediumItalic.otf")
+      "Unica77LL-Regular": require("shared/assets/fonts/Unica77LL-Regular.otf"),
+      "Unica77LL-Italic": require("shared/assets/fonts/Unica77LL-Italic.otf"),
+      "Unica77LL-Medium": require("shared/assets/fonts/Unica77LL-Medium.otf"),
+      "Unica77LL-MediumItalic": require("shared/assets/fonts/Unica77LL-MediumItalic.otf"),
+      "AGaramondPro-Bold": require("shared/assets/fonts/AGaramondPro-Bold.otf"),
+      "AGaramondPro-BoldItalic": require("shared/assets/fonts/AGaramondPro-BoldItalic.otf"),
+      "AGaramondPro-Italic": require("shared/assets/fonts/AGaramondPro-Italic.otf"),
+      "AGaramondPro-Regular": require("shared/assets/fonts/AGaramondPro-Regular.otf"),
+      "AGaramondPro-Semibold": require("shared/assets/fonts/AGaramondPro-Semibold.otf")
     });
     this.setState({ fontLoaded: true });
   }
   render() {
     return this.state.fontLoaded ? (
-      <ThemeProvider>
-        <ArtistBlock />
-      </ThemeProvider>
+      <AppShell>
+        <ArtworkBrick />
+      </AppShell>
     ) : null;
   }
 }

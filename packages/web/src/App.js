@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { ThemeProvider } from "shared/components/Theme";
-import ArtistBlock from "shared/components/ArtistBlock";
+import AppShell from "shared/components/AppShell";
+import ArtworkBrick from "shared/components/ArtworkBrick";
+import "./index.css";
 
 class App extends Component {
   render() {
     return (
-      <ThemeProvider>
-        <ArtistBlock />
-      </ThemeProvider>
+      <AppShell>
+        <ArtworkBrick />
+      </AppShell>
     );
   }
 }

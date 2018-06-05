@@ -1,6 +1,4 @@
-*
-!.gitignore
-!.babelrc
-!src
-!src/**/**
-!package.json
+components
+node_modules
+yarn-error.log
+context.js

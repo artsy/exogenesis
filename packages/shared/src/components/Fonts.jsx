@@ -1,4 +1,4 @@
-import { css } from "styled-components/primitives";
+import styled, { css } from "styled-components/primitives";
 import {
   color,
   fontSize,
@@ -26,19 +26,13 @@ const fontFamily = {
     ]
   },
   garamond: {
-    regular: [
-      "AGaramondPro-Regular",
-      "Adobe Garamond W08",
-      "adobe-garamond-pro",
-      "AGaramondPro-Regular",
-      "Times New Roman",
-      "Times",
-      "serif"
-    ]
+    regular: "AGaramondPro-Regular",
+    italic: "AGaramondPro-Italic",
+    semibold: "AGaramondPro-Semibold"
   }
 };
 
-export const Sans = css`
+export const Sans = styled.Text`
   font-family: ${fontFamily.unica.medium};
   ${color}
   ${fontSize}
@@ -48,8 +42,9 @@ export const Sans = css`
   ${maxWidth}
 `;
 
-export const Serif = css`
-  font-family: ${fontFamily.garamond.regular};
+export const Serif = styled.Text`
+  font-family: ${props =>
+    props.type ? fontFamily.garamond[props.type] : fontFamily.garamond.regular};
   ${color}
   ${fontSize}
   ${lineHeight}
