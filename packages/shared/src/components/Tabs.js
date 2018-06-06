@@ -1,14 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components/primitives";
 import { View } from "react-primitives";
-import { Display } from "./Fonts";
+import { Display } from "./elements/Typography";
 
-const Tab = props => <Display {...props} />;
-const ActiveTab = props => <Display {...props} />;
+const Tab = props => <Display size="3" {...props} />;
+const ActiveTab = props => <Display size="3" {...props} />;
 
 // labels
 // onTabChanged
 // activeTab
+
+const TabsContainer = styled.View`
+  display: flex;
+  flex-direction: row;
+`;
 
 export default class Tabs extends React.Component {
   setActiveTab = activeTab => {
@@ -16,7 +22,7 @@ export default class Tabs extends React.Component {
   };
   render() {
     return (
-      <View>
+      <TabsContainer>
         {this.props.labels.map(
           (label, index) =>
             this.activeTab === index ? (
@@ -27,7 +33,7 @@ export default class Tabs extends React.Component {
               </Tab>
             )
         )}
-      </View>
+      </TabsContainer>
     );
   }
 }

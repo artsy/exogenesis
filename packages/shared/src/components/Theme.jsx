@@ -24,7 +24,24 @@ export const Theme = {
   // https://www.notion.so/artsy/Spacing-93eeaed9fdf9480099fec7094fd1b9f3
   space: [0, 3, 5, 10, 20, 30, 40, 60, 90, 120, 180],
 
-  typeSet: {
+  fontFamily: {
+    unica: {
+      regular: "Unica77LL-Regular",
+      italic: "Unica77LL-Italic",
+      medium: "Unica77LL-Medium",
+      mediumItalic: "Unica77LL-MediumItalic"
+    },
+    avantgarde: {
+      regular: "AvantGardeGothicITC"
+    },
+    garamond: {
+      regular: "AGaramondPro-Regular",
+      italic: "AGaramondPro-Italic",
+      semibold: "AGaramondPro-Semibold"
+    }
+  },
+
+  typeSizes: {
     sans1: {
       fontSize: 10,
       lineHeight: 14

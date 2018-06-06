@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components/primitives";
 import { View, Image } from "react-primitives";
-import { SansText, SerifText } from "./Text";
+import { Sans, Serif } from "./elements/Typography";
 
 const Row = styled.View`
   display: flex;
@@ -17,22 +17,24 @@ export default class ArtworkBrick extends React.Component {
           style={{ width: 175, height: 262, marginBottom: 10 }}
           source={{ uri: "https://picsum.photos/200/300/?random" }}
         />
-        <SansText size="1">$2000,00</SansText>
-        <SerifText size="2" type="semibold" color="black60">
+        <Sans size="1" weight="medium">
+          $2000,00
+        </Sans>
+        <Serif size="2" weight="semibold" color="black60">
           Artist Unknown
-        </SerifText>
+        </Serif>
         <Row>
-          <SerifText size="2" type="italic" color="black60">
+          <Serif size="2" color="black60" italic>
             A Testable Image,
-          </SerifText>
-          <SerifText size="2" color="black60">
+          </Serif>
+          <Serif size="2" color="black60">
             {" "}
             2018
-          </SerifText>
+          </Serif>
         </Row>
-        <SerifText size="2" color="black60">
+        <Serif size="2" color="black60">
           Artsy
-        </SerifText>
+        </Serif>
       </View>
     );
   }

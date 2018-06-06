@@ -17,7 +17,6 @@ export default class AppShell extends React.Component {
     return (
       <ThemeProvider>
         <Container>
-          <Tabs labels={["test1", "test2"]} />
           <ArtworkBrick />
         </Container>
       </ThemeProvider>
