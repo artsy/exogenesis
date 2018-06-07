@@ -1,5 +1,5 @@
 import React from 'react'
-import { styledText } from '../platform/primitives'
+import { styled } from '../platform/primitives'
 import { color, maxWidth, space, textAlign, themeGet } from 'styled-system'
 
 const dynamicTheme = (callback) => (props) =>
@@ -22,7 +22,7 @@ const fontSize = (props) => `typeSizes.${props.typeSize}.fontSize`
 
 const lineHeight = (props) => `typeSizes.${props.typeSize}.lineHeight`
 
-const Text = styledText`
+const Text = styled.Text`
   font-family: ${dynamicTheme(fontPath)};
   font-size: ${dynamicTheme(fontSize)}px;
   line-height: ${dynamicTheme(lineHeight)}px;

@@ -1,3 +1,6 @@
-import styled from 'styled-components'
+import styles from 'styled-components'
 
-export const styledText = styled.span
+export const styled = {
+  Text: styles.span,
+  View: styles.div
+}
