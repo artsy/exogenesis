@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components/primitives'
+import { styledText } from '../platform/primitives'
 import { color, maxWidth, space, textAlign, themeGet } from 'styled-system'
 
 const dynamicTheme = (callback) => (props) =>
@@ -22,10 +22,10 @@ const fontSize = (props) => `typeSizes.${props.typeSize}.fontSize`
 
 const lineHeight = (props) => `typeSizes.${props.typeSize}.lineHeight`
 
-const StyledText = styled.Text`
+const Text = styledText`
   font-family: ${dynamicTheme(fontPath)};
-  font-size: ${dynamicTheme(fontSize)};
-  line-height: ${dynamicTheme(lineHeight)};
+  font-size: ${dynamicTheme(fontSize)}px;
+  line-height: ${dynamicTheme(lineHeight)}px;
   ${color};
   ${space};
   ${textAlign};
@@ -33,19 +33,11 @@ const StyledText = styled.Text`
 `
 
 export const Sans = (props) => (
-  <StyledText family="unica" typeSize={`sans${props.size || 4}`} {...props} />
+  <Text family="unica" typeSize={`sans${props.size || 4}`} {...props} />
 )
 export const Serif = (props) => (
-  <StyledText
-    family="garamond"
-    typeSize={`serif${props.size || 4}`}
-    {...props}
-  />
+  <Text family="garamond" typeSize={`serif${props.size || 4}`} {...props} />
 )
 export const Display = (props) => (
-  <StyledText
-    family="avantgarde"
-    typeSize={`display${props.size || 2}`}
-    {...props}
-  />
+  <Text family="avantgarde" typeSize={`display${props.size || 2}`} {...props} />
 )
